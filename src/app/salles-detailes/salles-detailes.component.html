@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="row ">
+      <div class="col-md-4">
+        <img [src]="sallesdetailes.image" class="img-fluid rounded-start" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{sallesdetailes.title}}</h5>
+          <p class="card-text">
+              {{sallesdetailes.description}}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated {{sallesdetailes.pubDate | date : "medium"}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

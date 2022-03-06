@@ -1,0 +1,28 @@
+<mat-card class="example-card" style="background-color: rgb(221, 213, 213);">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{salles.title}}</mat-card-title>
+      <mat-card-subtitle>{{salles.category}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="Product.image" class="card-img-top" alt="">
+    <mat-card-content>
+      <p>
+        {{salles.description}}
+      </p>
+      <p>
+        {{salles.price |price}}
+      </p>
+      <p  [ngStyle]="{'color': salles.rating.count != 0 ? 'green' : 'red' }">
+        {{salles.rating.count|count}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button style="background-color: rgb(15, 15, 15); height: 30px; color: aliceblue;" mat-button (click)="navigateToProductDetails()">Go to details</button>
+      <button mat-button style="background-color: rgb(87, 84, 84);height: 30px; color: aliceblue;">ADD TO CART</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  
+  
+  
+  
