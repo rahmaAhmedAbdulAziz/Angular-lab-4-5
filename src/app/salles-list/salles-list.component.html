@@ -1,1 +1,7 @@
-<p>salles-list works!</p>
+<div class="container" id="card">
+    <div class="row ">
+      <div class="col-3 rounded shadow m-3 p-0 justify-contant-center" *ngFor=" let oneProduct of salles">
+        <app-salles [salles]="oneProduct"></app-salles>
+      </div>
+    </div>
+  </div>

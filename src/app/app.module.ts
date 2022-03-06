@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,11 @@ import { RegisterComponent } from './register/register.component';
 import { SallesComponent } from './salles/salles.component';
 import { SallesDetailesComponent } from './salles-detailes/salles-detailes.component';
 import { SallesListComponent } from './salles-list/salles-list.component';
+import { CountPipe } from './count.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+
+import { PricePipe } from './price.pipe';
 
 @NgModule({
   declarations: [
@@ -20,11 +27,18 @@ import { SallesListComponent } from './salles-list/salles-list.component';
     RegisterComponent,
     SallesComponent,
     SallesDetailesComponent,
-    SallesListComponent
+    SallesListComponent,
+    CountPipe,
+    PricePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { Project } from '../project';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-salles',
@@ -6,7 +9,7 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./salles.component.css']
 })
 export class SallesComponent implements OnInit {
-  @Input() salles:salles ={
+  @Input() salles:Project ={
     id: 0,
     title: '',
     price: 0,
@@ -19,7 +22,7 @@ export class SallesComponent implements OnInit {
     }
   
   };
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }

@@ -1,28 +1,12 @@
-<mat-card class="example-card" style="background-color: rgb(221, 213, 213);">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{salles.title}}</mat-card-title>
-      <mat-card-subtitle>{{salles.category}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="Product.image" class="card-img-top" alt="">
-    <mat-card-content>
-      <p>
-        {{salles.description}}
-      </p>
-      <p>
-        {{salles.price |price}}
-      </p>
-      <p  [ngStyle]="{'color': salles.rating.count != 0 ? 'green' : 'red' }">
-        {{salles.rating.count|count}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button style="background-color: rgb(15, 15, 15); height: 30px; color: aliceblue;" mat-button (click)="navigateToProductDetails()">Go to details</button>
-      <button mat-button style="background-color: rgb(87, 84, 84);height: 30px; color: aliceblue;">ADD TO CART</button>
-    </mat-card-actions>
-  </mat-card>
-  
-  
-  
-  
-  
+<div class="card mb-5 mt-3 h-100 w-100 text-center" (click)="navigateToProductDetails()">
+  <h6 class="card-subtitle  text-muted">{{salles.category}}</h6>
+  <h6 class="card-title">{{salles.title}}</h6>
+  <img [src]="salles.image" class="card-img-top">
+  <div class="card-body text-center">
+    <p class="card-text">{{salles.description}}</p>
+    <h5 class="card-text">{{salles.price |price}}</h5>
+    <h5  class="card-text" [ngStyle]="{'color': salles.rating.count != 0 ? 'green' : 'red' }">{{salles.rating.count|count}}</h5>
+    <button class="btn btn-primary mt-5 ">detailes</button>
+   <a  class="btn btn-primary mt-auto" (click)="navigateToProductDetails()">ADD TO CART</a> 
+  </div>
+</div> 

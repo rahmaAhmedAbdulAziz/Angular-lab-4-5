@@ -16,5 +16,5 @@ export class PageLoginComponent implements OnInit {
   submitLoginForm(form : object){
     console.log(form);
 
-  } 
+  } }
 
